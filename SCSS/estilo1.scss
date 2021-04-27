@@ -1,0 +1,822 @@
+$colorfondoFooter:#A52A2A;
+$colorTitulos:rgba(221, 163, 87, 0.945);
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgba(233, 232, 232, 0.822);
+}
+
+
+
+#historiaContacto{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#tituloContacto{
+    margin-top: 20px;
+    animation-name: animacionUno;
+    animation-duration: 2s;
+}
+
+@keyframes animacionUno{
+    100%{
+        transform: scale(2,2);
+    } 
+}
+
+
+#tituloPrincipalContacto{
+    color: $colorTitulos;
+}
+
+#parrafoSeccionContacto{
+    color: $colorTitulos;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    animation-name: animacionDos;
+    animation-duration: 2s;
+}
+
+@keyframes animacionDos{
+    0%{
+        transform: translate(0, 5px)
+    }
+    100%{
+        transform: translate(0, 10px)
+    } 
+}
+
+#hoveBotonContactoIndex:hover{
+    background-color:rgb(204, 203, 200)
+}
+
+.parrafoContacto{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.botonContacto{
+    color: rgba(179, 120, 45, 0.945);
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 10%;
+    height: 30px;
+}
+
+.anclaContacto{
+    background-color: rgba(221, 163, 87, 0.945);
+    margin-bottom: 100px;
+    font-size: 100px;
+}
+
+.anclaContacto{
+     h2{
+        font-size: 30PX;
+        text-align: center;
+        }
+}
+
+.divisionHistoria{
+    &__titulo{
+                margin-top: 50px;
+    }
+
+    &__parrafo{
+        font-weight: bold;
+    }
+
+    &__imagen{
+        display: block;
+        margin: auto;
+    }
+}
+
+.indexH2Videos{
+    color: rgba(221, 163, 87, 0.945);
+    font-size: 44px;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 5%;
+}
+
+/*grilla division videos index*/
+
+.grillaDivisionVideo{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas:
+                        "video1 video2 video3";
+    margin-bottom: 15%;
+}
+
+#videoUno{
+    grid-area: video1;
+   justify-self: center;
+}
+
+#videoDos{
+    grid-area: video2;
+    justify-self: center;
+}
+
+#videoTres{
+    grid-area: video3;
+    justify-self: center;
+}
+
+
+/* grilla index*/
+
+.grillaIndex{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 5% 45%;
+    grid-template-areas: 
+                        "sector1 sector2"
+                        "contacto contacto"
+                        "sector3 sector4";
+}
+
+.hijo1GrillaIndex{
+    grid-area: sector1;
+    align-self: center;
+}
+
+.hijo2GrillaIndex{
+    grid-area: sector2;
+}
+
+
+.hijo3GrillaIndex{
+    grid-area: contacto;
+    background-color: $colorfondoFooter;
+}
+
+.hijo4GrillaIndex{
+    grid-area: sector3;
+}
+
+.hijo5GrillaIndex{
+    grid-area: sector4;
+    align-self: center;
+}
+
+.hijo1GrillaIndex{ 
+    h2{
+        color:rgba(221, 163, 87, 0.945);
+        font-size: 48px;
+        text-align: center;
+    }
+}
+
+.hijo5GrillaIndex{ 
+    h2{
+        color:rgba(221, 163, 87, 0.945);
+        font-size: 48px;
+        text-align: center;
+    }
+}
+
+.bordeImagenIndex{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.hijo3GrillaIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.hijo3GrillaIndex{ 
+    button{
+            background-color: white;
+            color: rgba(179, 120, 45, 0.945);
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 50px;
+            border: 2px solid rgba(179, 120, 45, 0.945) ;
+            cursor: pointer;
+          }
+}
+
+
+/* grilla Historia*/
+
+.grillaHistoria{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+                        "sector1 sector2"
+                        "sector3 sector4";
+}
+
+
+.hijoUnoGrillaHistoria{
+    grid-area: sector1;
+    align-self: center;
+    justify-self: center;
+}
+
+.hijoDosGrillaHistoria{
+    grid-area: sector2;
+    justify-self: center;
+}
+
+.hijoTresGrillaHistoria{
+    grid-area: sector4;
+    align-self: center;
+    justify-self: center;
+}
+
+.hijoCuatroGrillaHistoria{
+    grid-area: sector3;
+    justify-self: center;
+}
+
+
+/* Extend */
+$colorTituloHistoria: rgba(221, 163, 87, 0.945);
+$tamañoTituloHistoria: 33px;
+$tamañoParrafoHistoria: 18px;
+
+.hijoUnoGrillaHistoriaTitulo{
+    color: $colorTituloHistoria;
+    font-size: $tamañoTituloHistoria;
+    text-align: center;
+}
+
+.hijoTresGrillaHistoriaTitulo{
+    @extend .hijoUnoGrillaHistoriaTitulo;
+    text-align: center;
+}
+
+.hijoDosGrillaHistoriaParrafo{
+    font-size: $tamañoParrafoHistoria;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hijoCuatroGrillaHistoriaParrafo{
+    @extend .hijoDosGrillaHistoriaParrafo;
+    text-align: center;
+}
+
+/* Break */
+
+
+.segundaDivisionHistoria{
+    margin-top: 100px;
+
+    &__titulo{
+            color: rgba(221, 163, 87, 0.945);
+            font-size: 40px;
+            text-align: center;
+    }
+
+    &__parrafo{
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+.terceraDivisionHistoria{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 150px;
+
+    
+    &__boton{
+            width: 20%;
+            height: 40px;
+            color: rgba(179, 120, 45, 0.945);
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 15px;
+        }
+
+    &__boton:hover{
+            background-color: $colorfondoFooter;
+        }
+}
+
+  
+
+ .divisionPrimeraIndex{
+     background-color: rgba(223, 162, 83, 0.945);
+     margin-bottom: 120px;
+     padding-top: 20px;
+     padding-bottom: 20px;
+ }
+
+
+.historiaParrafo{
+    font-size: 20px;
+}
+
+.mainBaterias{
+    overflow: hidden;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+.listaBateria{ 
+    li{
+        list-style:none;
+        text-align: center;
+      }
+}
+
+/* empieza grid Artistas */
+.grillaArtistas{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: 
+                        "artista1 artista2 artista3 "
+                        "artista4 artista5 artista6 "
+                        "artista7 artista8 artista9 ";
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 1%;
+    grid-column-gap:1%;
+    margin-right: 70px;
+    margin-left: 70px;
+    margin-bottom: 150px;
+
+}
+
+.grillaArtistas{ 
+    img{
+        width: 100%;
+        }
+}
+
+#artista1{
+    grid-area: artista1;
+}
+
+#artista2{
+    grid-area: artista2;
+ }
+
+#artista3{
+    grid-area: artista3;
+ }
+
+#artista4{
+    grid-area: artista4;
+}
+
+#artista5{
+    grid-area: artista5;
+}
+#artista6{
+    grid-area: artista6;
+}
+
+#artista7{
+    grid-area: artista7;
+}
+
+#artista8{
+    grid-area: artista8;
+}
+
+#artista9{
+    grid-area: artista9;
+}
+
+/* termina grid Artistas*/
+
+
+.seccionPrimeraArtistas{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    &__tituloUno{
+                color: $colorTitulos;
+                text-align: center;
+                font-size: 45px;
+    }
+
+    &__tituloDos{
+                text-align: center;
+                padding-top: 20px;
+                color: $colorTitulos;
+                font-weight: bold;
+    }
+
+}
+
+
+/* Footer*/
+.divisionPadreFooter{
+    background: $colorfondoFooter;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.divisionHijoUnoFooter{
+    display: flex;
+    flex-direction: row;
+}
+
+.divisionHijoUnoFooter{
+    margin-left: 10px;
+}
+.diviisionHijoDosFooter{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.diviisionHijoDosFooter{
+    p{
+        padding-top: 0;
+        padding-bottom: 0;
+        color:white;
+    }
+}
+
+.diviisionHijoDosFooter{
+    ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 20px;
+        margin-top: 10px;
+    }
+}
+
+.diviisionHijoDosFooter {
+    ul{
+         li{
+            cursor: pointer;
+            }
+        }
+}
+
+.diviisionHijoDosFooter{ 
+    ul{
+        li:hover{
+                 zoom:105%;
+                }
+      }
+}
+
+/*Menu Principal*/
+
+.divisionPadreNav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menuPrincipal{
+     nav{
+        display: flex;
+        flex-direction: row;
+        }
+}
+
+.menuPrincipal{ 
+    ul{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
+}
+
+ .menuPrincipal{
+    ul{
+       li{
+            padding-top: 50px;
+            margin-right: 15px;
+         }
+      }
+}
+
+ .menuPrincipal{ 
+    ul{
+      li{
+          a{
+            text-decoration: none;
+            color: cornsilk;
+            font-weight: bold;
+            font-size: 18px;
+            }
+        }
+      }
+}
+
+.divisionPadreNav{
+    a{
+      margin-left: 10px;
+     }
+}
+
+.menuPrincipal{
+    ul{ 
+      li{
+         a:hover{
+                 color:rgb(121, 120, 118)
+                }
+        }
+      }  
+}
+
+//Contacto
+
+.mainContacto{
+    overflow: hidden;
+}
+
+.divisionFormContacto{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    margin-left: 10px;
+    margin-bottom: 150px;
+  }
+  
+.divisionHijoContacto{
+
+}
+  
+.divisionFormContacto{ 
+      label{
+            font-size: 20px;
+           }
+}
+  
+.divisionFormContacto{ 
+    input{
+            font-size: 15px;
+            border: 2px solid rgba(179, 120, 45, 0.945);
+            border-radius: 5px;
+            text-align: center;
+        }
+}
+  
+.divisionFormContacto{
+    input:focus{
+                background-color: rgba(179, 120, 45, 0.945);
+                color: white;
+                font-weight: bold;
+                }
+}
+ 
+header{
+      background: $colorfondoFooter;
+}  
+  
+body{
+      font-family: 'Shippori Mincho B1', serif;
+}
+  
+  
+h1{
+    color: $colorTitulos;
+    text-align: center;
+    font-size: 45px;
+}
+  
+  
+p{
+    font-size: 18px;
+    text-align:center;
+    padding: 30px;
+    font-weight: bold;
+}
+  
+  
+  
+  
+@media only screen and (maX-width: 768px){
+      .grillaIndex{
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 20% 25% 10% 20% 25%;
+          grid-template-areas: 
+                              "sector1" 
+                               "sector2"
+                              "contacto"
+                              "sector3" 
+                              "sector4";
+        }
+      .hijo3GrillaIndex{
+          margin-bottom: 50px;
+      }
+  
+      .hijo2GrillaIndex{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 50px;
+      }
+  
+      .hijo4GrillaIndex{
+          grid-area: sector4;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+          
+      .hijo5GrillaIndex{
+          grid-area: sector3;
+          align-self: center;
+      }
+      
+      .bordeImagenIndex{
+          max-height: 100%; 
+          max-width: 100%;
+          border: none;
+      }
+  
+      .hijo1GrillaIndex{ 
+        h2{
+          text-align: center;
+          font-size: 45px;
+         }
+      }
+  
+      .hijo5GrillaIndex{ 
+         h2{
+          text-align: center;
+          font-size: 45px;
+           }
+        }
+}
+  
+@media only screen and (maX-width: 480px) {
+      
+      .grillaIndex{
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: 20% 25% 10% 20% 25%;
+          grid-template-areas: 
+                              "sector1" 
+                              "sector2"
+                              "contacto"
+                              "sector3" 
+                              "sector4";
+        }
+      .hijo3GrillaIndex{
+          margin-bottom: 50px;
+      }
+  
+      .hijo4GrillaIndex{
+          grid-area: sector4;
+          
+      }
+          
+      .hijo5GrillaIndex{
+          grid-area: sector3;
+          align-self: center;
+      }
+      
+      .bordeImagenIndex{
+          max-height: 100%; 
+          max-width: 100%;
+          border: none;
+      }
+  
+      .hijo1GrillaIndex{ 
+          h2{
+             text-align: center;
+             font-size: 35px;
+            }
+      }
+  
+      .hijo5GrillaIndex{ 
+          h2{
+             text-align: center;
+             font-size: 35px;
+            }
+      }
+  
+      .divisionPadreNav{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+      }
+      
+      .divisionPadreNav{ 
+          a{
+            text-align: center;
+           }
+      }
+  
+    .grillaDivisionVideo{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas: 
+                            "sectorUno"
+                            "sectorDos"
+                            "sectorTres";
+
+      }
+    #videoUno{
+        grid-area: sectorUno;
+    }
+
+    #videoDos{
+        grid-area: sectorDos;
+    }
+     
+    #videoTres{
+        grid-area: sectorTres;
+    }   
+
+
+    .divisionHistoria{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 33%;
+        grid-template-areas: 
+                                  "sectorUno"
+                                  "sectorDos"
+                                  "sectorTres";
+    }
+    
+    .divisionHistoria__titulo{
+            grid-area: sectorUno;
+            align-self: center;
+    
+    }
+    
+    .divisionHistoria__parrafo{
+            grid-area: sectorDos;
+            align-self: center;
+    }
+    
+    .divisionHistoria__imagen{
+            grid-area: sectorTres;
+            max-height: 100%; 
+            max-width: 100%;
+    }
+
+    .grillaHistoria{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        grid-template-areas: 
+                                  "sectorUno"
+                                  "sectorDos"
+                                  "sectorTres"
+                                 "sectorCuatro";
+    }
+    
+    .hijoUnoGrillaHistoria{
+          grid-area: sectorUno;
+              align-self: center;
+    
+    }
+    
+    .hijoDosGrillaHistoria{
+          grid-area: sectorDos;
+              align-self: center;
+    }
+    
+    .hijoTresGrillaHistoria{
+          grid-area: sectorTres;
+              align-self: center;
+    }
+    
+    .hijoCuatroGrillaHistoria{
+          grid-area: sectorCuatro;
+              align-self: center;
+    }
+    
+
+    .terceraDivisionHistoria__boton{
+        font-size: 15px;
+    }
+    
+
+}
+  

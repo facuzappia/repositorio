@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nuestro objetivo es proveer exactamente lo que el músico necesita">
+    <meta name="keywords" content="trabajo, artesanal, contacto, familia, musico, profesional"> 
+    <link rel="stylesheet" href="CSS/estilo1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Contacto con Baterios de la Patagonia</title>
+</head>
+<body>
+    <header class="divisionPadreNav">
+        <a href="index.html"><img src="Imagenes/logoNuevo.png" alt="Logo" width="150" height="150"></a>
+        <nav class="menuPrincipal">
+            <ul>
+                <li><a  href="index.html">Inicio</a></li>
+                <li><a  href="historia.html">Historia</a></li>
+                <li><a  href="baterias.html">Baterias</a></li>
+                <li><a  href="artistas.html">Artistas</a></li>
+                <li><a  href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="mainContacto">
+        <h1 id="tituloContacto">Nuestra familia batera</h1>
+        <p id="parrafoSeccionContacto">Completá los campos con tus datos para que podamos contactarte a la brevedad</p>
+        
+        <div class="divisionFormContacto">
+            <form class="divisionHijoContacto" action="">
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="" placeholder="Nombre" id="nombre" size="25" style="width: 435px; height: 20px;">
+                <br>
+                <label for="apellido">Apellido</label><br>
+                <input type="text" name="" placeholder="Apellido" id="apellido" size="25" style="width: 435px; height: 20px;">
+                <br>
+                <label for="telefono">Teléfono</label><br>
+                <input type="number" name="" placeholder="Telefono" id="telefono" size="25" style="width: 435px; height: 20px;">
+                <br>
+                <label for="mail">Mail</label><br>
+                <input type="email" name="" placeholder="mail@ejemplo.com" id="mail" required size="25" style="width: 435px; height: 20px;">
+                <br>
+                <label for="">Mensaje</label><br>
+                <textarea name="" id="" cols="60" rows="10"></textarea>
+                <br><br>
+                <label for="contacto">Como quiere que lo contactemos?</label>
+                <select name="" id="contacto">
+                    <option value="">Telefono</option>
+                    <option value="">Mail</option>
+                    <option value="">Whatsapp</option>
+                </select>
+                <br>
+                <label for="datos">Confirme los dato ingresados son correctos</label>
+                <input type="checkbox" name="" id="datos">
+                <br><br>
+                <input class="botonContacto" type="submit" value="Enviar">
+                <input class="botonContacto" type="reset" value="Reset">
+            </form>
+        </div>
+    </main>
+    <footer class="divisionPadreFooter">
+        <div class="divisionHijoUnoFooter">
+            <div>
+                <a href="index.html"><img src="Imagenes/logoNuevo.png" alt="Logo" width="150" height="150"></a>
+            </div>
+            <div class="diviisionHijoDosFooter">
+                <p>299-456-2345</p>
+                <p>bateros@gmail.com</p>
+                <p>Roca 22, Cipolletti, Rio Negro</p>
+                <ul>
+                    <li><a href=""></a><img src="Imagenes/icono_facebook.png" alt="" width="40px" height="40px"></li>
+                    <li><a href=""></a><img src="Imagenes/icono_instagram.png" alt="" width="40px" height="40px"></li>
+                    <li><a href=""></a><img src="Imagenes/icono_twiter.png" alt="" width="40px" height="40px"></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p class="parrafoContacto">© 2021 - Todos los derechos reservados. By BATEROS.</p>
+        </div>    
+    </footer>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
